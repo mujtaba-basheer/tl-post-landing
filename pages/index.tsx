@@ -1,7 +1,13 @@
 /** @format */
 
+import HomePage from "./HomePage";
+
 const Layout = () => {
-  return <main>Hero</main>;
+	return (
+		<main>
+			<HomePage />
+		</main>
+	);
 };
 
 export default Layout;
