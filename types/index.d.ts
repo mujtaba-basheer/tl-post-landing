@@ -27,8 +27,13 @@ export type LeagueDetailsType = {
   key: string;
   main: string;
   paras: string[];
+  qnas: {
+    q: string;
+    a: string;
+  }[];
   color: string;
   img_file: string;
+  vid_file: string;
   state?: string;
 };
 
