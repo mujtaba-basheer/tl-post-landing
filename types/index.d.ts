@@ -37,6 +37,18 @@ export type LeagueDetailsType = {
   state?: string;
 };
 
+export type FaqItemType = {
+  question: string;
+  answer: string;
+  isMdn?: boolean;
+};
+
+export type FaqDetailsType = {
+  key: string;
+  faqs: FaqItemType[];
+  state?: string;
+};
+
 export type TypingDetail = {
   w1: string;
   w2: string;

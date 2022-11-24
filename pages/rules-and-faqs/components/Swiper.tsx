@@ -37,22 +37,6 @@ const BigHeading = styled.h2`
   }
 `;
 
-const StyledDescription = styled.p`
-  font-size: 1.5rem;
-  font-weight: 400;
-  color: #ffffff;
-  text-align: center;
-  margin: 0 auto;
-  width: 540px;
-  margin-bottom: 3em;
-
-  @media ${device.mobile} {
-    font-size: 1rem;
-    line-height: 22.4px;
-    width: 300px;
-  }
-`;
-
 const TabLinks = styled.div`
   display: flex;
   justify-content: space-between;
@@ -183,39 +167,6 @@ const StyledHeading = styled.h2`
 
   @media ${device.mobile} {
     font-size: 1.5rem;
-  }
-`;
-
-const MainPara = styled.p`
-  font-size: 1.25rem;
-  font-weight: 600;
-  margin-bottom: 1.75em;
-
-  @media ${device.mobile} {
-    font-size: 1rem;
-    max-width: none;
-    text-align: center;
-  }
-`;
-
-const ShortPara = styled.p`
-  font-size: 1.2rem;
-  font-weight: 400;
-  line-height: 28px;
-
-  @media ${device.mobile} {
-    font-size: 1rem;
-    max-width: none;
-    text-align: center;
-    line-height: normal;
-  }
-
-  &:not(:last-child) {
-    margin-bottom: 0.75em;
-
-    @media ${device.mobile} {
-      margin-bottom: 1.25em;
-    }
   }
 `;
 
