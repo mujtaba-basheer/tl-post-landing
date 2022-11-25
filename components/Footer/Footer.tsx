@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
 import BG from "../../public/assets/Footer/BG.png";
+import device from "../../styles/breakpoints";
 const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const Container = styled.footer`
@@ -18,6 +19,8 @@ const Container = styled.footer`
 	height: fit-content;
 	display: flex;
 	flex-direction: column;
+	@media ${device.mobile} {
+	}
 `;
 
 const MainArea = styled.div`
@@ -26,6 +29,11 @@ const MainArea = styled.div`
 	justify-content: space-between;
 	padding-bottom: 2rem;
 	border-bottom: 1px solid #ffffff90;
+
+	@media ${device.mobile} {
+		display: flex;
+		flex-direction: column;
+	}
 `;
 
 const Row1 = styled.div`
@@ -121,9 +129,11 @@ const LinksContainer = styled.div`
 const Row3 = styled.div`
 	display: flex;
 	flex-direction: column;
-	justify-content:space-between;
-
+	justify-content: space-between;
 	width: 30%;
+	.icons {
+		margin-right: 0.5rem;
+	}
 	.title {
 		font-weight: 600;
 		font-size: 20px;
@@ -132,7 +142,6 @@ const Row3 = styled.div`
 	.connect-us-items {
 		display: flex;
 		flex-direction: row;
-		margin
 	}
 `;
 

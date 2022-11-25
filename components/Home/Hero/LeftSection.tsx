@@ -2,6 +2,7 @@
 
 import React from "react";
 import styled from "styled-components";
+import device from "../../../styles/breakpoints";
 
 const Container = styled.div`
 	display: grid;
@@ -11,6 +12,9 @@ const Container = styled.div`
 	box-sizing: border-box;
 	padding: 5rem 0 0 5rem;
 	/* place-items: center; */
+	@media ${device.mobile} {
+		padding: 1rem 0 0 1rem;
+	}
 `;
 const HeaderTag = styled.h1``;
 
@@ -40,6 +44,11 @@ const GetLinkArea = styled.div`
 	margin-top: 1.5rem;
 	display: flex;
 	flex-direction: row;
+	@media ${device.mobile} {
+		display: flex;
+		flex-direction: column;
+		justify-content: start;
+	}
 `;
 
 const InputArea = styled.div`
@@ -51,6 +60,7 @@ const InputArea = styled.div`
 	padding: 12px 16px;
 	width: 80%;
 	box-sizing: border-box;
+
 	/* width: 80%; */
 	/* height: 50px; */
 `;
@@ -82,8 +92,9 @@ const LinkButton = styled.button`
 	padding: 0 11px;
 	cursor: pointer;
 
-	/* left: 400px;
-	right: 400px; */
+	@media ${device.mobile} {
+		right: 0px;
+	}
 `;
 
 const StatsArea = styled.div`

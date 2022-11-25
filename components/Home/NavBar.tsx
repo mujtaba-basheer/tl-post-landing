@@ -1,8 +1,10 @@
 /** @format */
 
 import Image from "next/image";
+import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import TL_Logo from "../../assets/HomePage/TL_Logo.svg";
+import device from "../../styles/breakpoints";
 
 const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -55,7 +57,14 @@ const DeskTopNavBar = () => {
 	);
 };
 
+const MobileNavBar = () => {
+	return <div>Mobile Navbar</div>;
+};
+
 const NavBar = () => {
+	const isMobileView = useMediaQuery({ query: device.mobile });
+
+	if (isMobileView) return <MobileNavBar />;
 	return <DeskTopNavBar />;
 };
 
