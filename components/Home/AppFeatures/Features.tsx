@@ -106,9 +106,11 @@ const FeaturesContainer = styled.div`
     }
 
     & img {
-      display: block;
-      width: 100%;
-      height: auto;
+      @media ${device.mobile} {
+        display: block;
+        width: 100%;
+        height: auto;
+      }
     }
   }
 `;
