@@ -2,14 +2,14 @@
 
 import Footer from "../../components/Footer/Footer";
 
-import Swiper from "./components/Swiper";
-import FAQs from "./components/FAQs";
+import Intro from "./components/Intro";
+import Founders from "./components/Founders";
 
 const RulesAndFAQs = () => {
   return (
     <div>
-      <Swiper />
-      <FAQs />
+      <Intro />
+      <Founders />
       <Footer />
     </div>
   );

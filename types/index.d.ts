@@ -13,7 +13,6 @@ export type CssItemProps = {
   bottom?: number;
   left?: number;
   right?: number;
-  rotation: number;
   size: number;
 };
 
