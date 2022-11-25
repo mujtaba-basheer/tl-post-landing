@@ -27,8 +27,25 @@ export type LeagueDetailsType = {
   key: string;
   main: string;
   paras: string[];
+  qnas: {
+    q: string;
+    a: string;
+  }[];
   color: string;
   img_file: string;
+  vid_file: string;
+  state?: string;
+};
+
+export type FaqItemType = {
+  question: string;
+  answer: string;
+  isMdn?: boolean;
+};
+
+export type FaqDetailsType = {
+  key: string;
+  faqs: FaqItemType[];
   state?: string;
 };
 

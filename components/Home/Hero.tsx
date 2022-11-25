@@ -34,6 +34,9 @@ const HeroContentSection = styled.div`
 	grid-template-columns: 1fr 1fr; */
 	padding-top: 0.5rem;
 	box-sizing: border-box;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
 	@media ${device.mobile} {
 		display: flex;
 		flex-direction: column;
