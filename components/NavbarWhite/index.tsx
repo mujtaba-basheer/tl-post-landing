@@ -28,7 +28,7 @@ const NavbarContent = styled.div`
   }
 `;
 
-const LogoContainer = styled.div`
+const LogoContainer = styled.a`
   @media ${device.mobile} {
     height: 24px;
   }
@@ -130,7 +130,7 @@ const Navbar: () => JSX.Element = () => {
   return (
     <NavContainer>
       <NavbarContent>
-        <LogoContainer>
+        <LogoContainer href="/">
           <img src={`${asset_prefix}/assets/navbar/TL_logo.svg`} alt="logo" />
         </LogoContainer>
         <Menu
@@ -142,7 +142,12 @@ const Navbar: () => JSX.Element = () => {
         </Menu>
         <LinksContainer>
           {navLinksData.map((x) => (
-            <LinkItem href={x.key} key={x.key} data-active={x.key === pathname}>
+            <LinkItem
+              href={x.key}
+              key={x.key}
+              target={x.target || "_self"}
+              data-active={x.key === pathname}
+            >
               {x.title}
             </LinkItem>
           ))}

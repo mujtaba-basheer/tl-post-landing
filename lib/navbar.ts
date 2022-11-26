@@ -11,6 +11,7 @@ export const navLinksData: NavLinkType[] = [
   },
   {
     title: "Blogs",
-    key: "/blogs",
+    key: "https://blog.tradingleagues.in/",
+    target: "_blank",
   },
 ];

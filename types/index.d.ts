@@ -78,4 +78,5 @@ export type SocialLinksType = {
 export type NavLinkType = {
   title: string;
   key: string;
+  target?: string;
 };
