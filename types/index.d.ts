@@ -70,3 +70,7 @@ export type PopupProps = {
   status: [FormStatus, FormStatus, FormStatus];
   loading: [boolean, boolean, boolean];
 };
+
+export type SocialLinksType = {
+  [key: string]: string;
+};
