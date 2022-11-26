@@ -74,3 +74,8 @@ export type PopupProps = {
 export type SocialLinksType = {
   [key: string]: string;
 };
+
+export type NavLinkType = {
+  title: string;
+  key: string;
+};

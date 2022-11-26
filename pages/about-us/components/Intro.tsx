@@ -2,10 +2,11 @@ import styled from "styled-components";
 import device from "../../../styles/breakpoints";
 
 const StyledSection = styled.section`
-  background-color: #ffffff;
+  background-color: #fbfbff;
   padding: 6em 0;
 
   @media ${device.mobile} {
+    padding: 3em 0;
   }
 `;
 
