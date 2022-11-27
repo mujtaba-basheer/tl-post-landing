@@ -1,27 +1,22 @@
 /** @format */
 
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 import styled from "styled-components";
-import BG from "../../public/assets/Footer/BG.png";
 import device from "../../styles/breakpoints";
-import { SocialLinksType } from "../../types";
+import { socialLinksData } from "../../lib/social";
 
 const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const Container = styled.footer`
-  height: 100px;
-  width: 100%;
-  /* border: 1px solid red; */
   color: white;
   background: url(${asset_prefix}/assets/Footer/BG.png);
   background-size: cover;
-  padding: 2rem;
-  /* height: 500px; */
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
+  padding: 4em 6em;
+
   @media ${device.mobile} {
+    padding: 3em 1em;
   }
 `;
 
@@ -29,39 +24,45 @@ const MainArea = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding-bottom: 2rem;
-  border-bottom: 1px solid #ffffff90;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
   @media ${device.mobile} {
-    display: flex;
-    flex-direction: column;
+    display: block;
   }
 `;
 
 const Row1 = styled.div`
-  display: flex;
-  flex-direction: column;
-  width: 33%;
+  & > img {
+    margin-bottom: 1.5em;
+  }
 `;
+
 const InputContainer = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin-bottom: 3rem;
+  margin-bottom: 4em;
+
+  @media ${device.mobile} {
+    display: block;
+    margin-bottom: 3em;
+  }
 `;
+
 const InputArea = styled.div`
   /* border: 1px solid red; */
   height: 44px;
   display: flex;
   flex-direction: row;
   border-radius: 30px;
-  width: 250px;
-  padding: 0 0.3rem;
+  padding-left: 0.5em;
   background: rgba(255, 255, 255, 0.1);
 
   & input {
+    font-size: 1.125rem;
+    font-weight: 400;
     color: #fff;
-    max-width: 80%;
     padding: 0.3rem 0.5rem;
     width: 100%;
     background: none;
@@ -73,37 +74,51 @@ const InputArea = styled.div`
 
 const GETLINKBTN = styled.button`
   background: #00df8d;
-  border-radius: 47px;
+  border-radius: 44px;
   border: none;
   height: 44px;
   padding: 0 0.8rem;
   position: relative;
-  right: 30px;
   text-align: center;
   color: #15182c;
-  font-size: 12px;
+  font-size: 14px;
   font-family: "Barlow";
   font-weight: 500;
+  left: calc(-22px - 0.5em);
+
+  @media ${device.mobile} {
+    left: auto;
+    font-size: 1rem;
+    font-weight: 600;
+    margin-top: 1em;
+  }
 `;
 
 const DownLoadAppContainer = styled.div`
-  display: grid;
-  grid-template-columns: auto auto;
+  display: flex;
+  gap: 1.5em;
+
+  @media ${device.mobile} {
+    margin-bottom: 2em;
+  }
 `;
 
-const Row2 = styled.div`
-  width: 33%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-`;
+const Row2 = styled.div``;
+
 const PageLinksContainer = styled.div`
+  font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
-  .links-box {
-    margin-right: 2rem;
+  gap: 3em;
+  margin-bottom: 3em;
+
+  & div.links-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
   }
+
   .links_box_title {
     font-weight: 600;
     font-size: 20px;
@@ -111,28 +126,40 @@ const PageLinksContainer = styled.div`
   }
 `;
 
-const LinksItems = styled.p`
-  margin: 0.8rem 0;
+const LinksItems = styled(Link)`
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  color: currentColor;
 `;
 
 const SocialLinksContainer = styled.div`
-  width: 100%;
+  font-family: "Inter", sans-serif;
+
+  @media ${device.mobile} {
+    display: none;
+  }
+
+  & p {
+    font-size: 1.25rem;
+    font-weight: 600;
+  }
 `;
+
 const LinksContainer = styled.div`
-  margin-top: 1rem;
-  width: 50%;
+  margin-top: 1.5rem;
   /* border: 1px solid red; */
 
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  gap: 1em;
 `;
 
 const Row3 = styled.div`
+  font-family: "Inter", sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  width: 30%;
+  gap: 1.5em;
+
   .icons {
     margin-right: 0.5rem;
   }
@@ -145,28 +172,56 @@ const Row3 = styled.div`
     display: flex;
     flex-direction: row;
   }
-`;
+  .details {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 24px;
+    max-width: 200px;
 
-const TradeMarkArea = styled.div`
-  display: flex;
-  flex-direction: row;
-  padding: 1.5rem 0;
-  justify-content: space-between;
-  .below-footer-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 18%;
+    & a {
+      text-decoration: none;
+      color: currentColor;
+    }
   }
 `;
 
-const Links: SocialLinksType = {
-  twitter: `${asset_prefix}/assets/Footer/Twitter.svg`,
-  facebook: `${asset_prefix}/assets/Footer/FB.svg`,
-  instagram: `${asset_prefix}/assets/Footer/Instagram.svg`,
-  linkedIn: `${asset_prefix}/assets/Footer/Linkedin.svg`,
-  youtube: `${asset_prefix}/assets/Footer/Youtube.svg`,
-};
+const TradeMarkArea = styled.div`
+  font-family: "Inter", sans-serif;
+  display: flex;
+  flex-direction: row-reverse;
+  padding-top: 3em;
+  align-items: center;
+  justify-content: space-between;
+
+  @media ${device.mobile} {
+    padding-top: 1.5em;
+    display: block;
+  }
+
+  & p.tm {
+    font-size: 1rem;
+    font-weight: 400;
+  }
+
+  & div.below-footer-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 2em;
+
+    @media ${device.mobile} {
+      justify-content: space-between;
+      margin-bottom: 1.5em;
+    }
+
+    & a {
+      text-decoration: none;
+      color: currentColor;
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+`;
 
 function Footer() {
   return (
@@ -175,13 +230,13 @@ function Footer() {
         <Row1>
           <Image
             src={`${asset_prefix}/assets/Footer/TL-Logo.svg`}
-            width={150}
-            height={50}
+            width={200}
+            height={34}
             alt="logo"
           />
           <InputContainer>
             <InputArea>
-              <input placeholder="Enter you phone Number"></input>
+              <input placeholder="Enter Mobile Number"></input>
             </InputArea>
             <GETLINKBTN>GET DOWNLOAD LINK</GETLINKBTN>
           </InputContainer>
@@ -204,76 +259,83 @@ function Footer() {
           <PageLinksContainer>
             <div className="links-box">
               <div className="links_box_title">How To Play</div>
-              <LinksItems>Rules</LinksItems>
-              <LinksItems>FAQs</LinksItems>
+              <LinksItems href="/rules-and-faqs#rules">Rules</LinksItems>
+              <LinksItems href="/rules-and-faqs#faqs">FAQs</LinksItems>
             </div>
             <div className="links-box">
               <div className="links_box_title">About Us</div>
-              <LinksItems>Our Mission</LinksItems>
+              <LinksItems href="/about-us">Our Mission</LinksItems>
             </div>
           </PageLinksContainer>
           <SocialLinksContainer>
             <p>Connect Us</p>
             <LinksContainer>
-              {Object.keys(Links).map((item) => (
-                <Image
-                  key={item}
-                  src={Links[item]}
-                  width={25}
-                  height={20}
-                  alt={`${item}-logo`}
-                />
+              {socialLinksData.map((x) => (
+                <Link href={x.url} target="_blank">
+                  <Image
+                    key={x.key}
+                    src={`${asset_prefix}/assets/Footer/${x.img}.svg`}
+                    width={30}
+                    height={30}
+                    alt={x.title}
+                    title={x.title}
+                  />
+                </Link>
               ))}
             </LinksContainer>
           </SocialLinksContainer>
         </Row2>
         <Row3>
-          <p className="title">Connect Us</p>
+          <p className="title">Contact Us</p>
           <div className="connect-us-items">
             <span className="icons">
               <Image
                 src={`${asset_prefix}/assets/Footer/Call.svg`}
-                width={20}
-                height={17}
+                width={24}
+                height={24}
                 alt="call-icon"
               />
             </span>
-            <p className="details">+91 8923456789</p>
+            <p className="details">
+              <Link href="tel:+91 8923456789">+91 8923456789</Link>
+            </p>
           </div>
           <div className="connect-us-items">
             <span className="icons">
               <Image
                 src={`${asset_prefix}/assets/Footer/Email.svg`}
-                width={20}
-                height={17}
+                width={24}
+                height={24}
                 alt="call-icon"
               />
             </span>
-            <p className="details">tradingleagues@gmail.com</p>
+            <p className="details">
+              <Link href="mailto:tradingleagues@gmail.com">
+                tradingleagues@gmail.com
+              </Link>
+            </p>
           </div>
           <div className="connect-us-items">
             <span className="icons">
               <Image
                 src={`${asset_prefix}/assets/Footer/Location.svg`}
-                width={20}
-                height={17}
+                width={24}
+                height={24}
                 alt="call-icon"
               />
             </span>
             <p className="details">
-              1A, first floor, Eve Garden, <br />
-              Indira Nagar, Bangalore,
-              <br /> Karnataka
+              1A, first floor, Eve Garden, Indira Nagar, Bangalore, Karnataka
             </p>
           </div>
         </Row3>
       </MainArea>
       <TradeMarkArea>
-        <div>© 2022, Rain Platforms Inc. All rights reserved.</div>
         <div className="below-footer-links">
-          <p>Privacy policy</p>
-          <p>Terms & Conditions</p>
+          <Link href="/privacy-policy">Privacy policy</Link>
+          <Link href="/terms-and-conditions">Terms & Conditions</Link>
         </div>
+        <p className="tm">© 2022, Rain Platforms Inc. All rights reserved.</p>
       </TradeMarkArea>
     </Container>
   );
