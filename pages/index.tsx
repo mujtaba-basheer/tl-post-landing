@@ -1,13 +1,5 @@
 /** @format */
 
-import HomePage from "./HomePage";
+import HomePage from "./home";
 
-const Layout = () => {
-	return (
-		<main>
-			<HomePage />
-		</main>
-	);
-};
-
-export default Layout;
+export default HomePage;
