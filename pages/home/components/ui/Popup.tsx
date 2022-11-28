@@ -118,7 +118,7 @@ const Popup = ({
   setFormContext: Dispatch<SetStateAction<PopupProps>>;
   formContext: PopupProps;
 }) => {
-  const transform = (mobile: string) => mobile.substring(6);
+  const transform = (mobile: string) => (mobile ? mobile.substring(6) : "");
   const onClose = () => {
     setFormContext({
       mobile: "",
@@ -130,7 +130,7 @@ const Popup = ({
   };
 
   return (
-    <Modal open={formContext.open_modal}>
+    <Modal open={formContext?.open_modal}>
       <PopupContent>
         <CloseButton onClick={onClose}>
           <img src={`${asset_prefix}/assets/close-circle.svg`} />
@@ -140,13 +140,13 @@ const Popup = ({
         <h3>You have been added to the waitlist</h3>
         <p>
           A referral link has been successfully sent to{" "}
-          <span>XXXXXX{transform(formContext.mobile)}</span>
+          <span>XXXXXX{transform(formContext?.mobile)}</span>
         </p>
         <PopupInfo>
           <h3>Player</h3>
           <h3>Waitlist</h3>
           <h2>You</h2>
-          <h2>#{formContext.wailist_no}</h2>
+          <h2>#{formContext?.wailist_no}</h2>
         </PopupInfo>
         <p>
           Check your WhatsApp message to see how you can win amazing Apple
