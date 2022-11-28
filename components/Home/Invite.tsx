@@ -1,9 +1,9 @@
 import styled from "styled-components";
 
-import { coinCssDetails, starCssDetails } from "../../../lib/invite";
+import { coinCssDetails, starCssDetails } from "../../lib/invite";
 // import { submitHandler } from "../lib/handler";
-import { CssItemProps, PopupProps } from "../../../types";
-import device from "../../../styles/breakpoints";
+import { CssItemProps, PopupProps } from "../../types";
+import device from "../../styles/breakpoints";
 import { Dispatch, SetStateAction } from "react";
 import Loader from "./ui/Loader";
 

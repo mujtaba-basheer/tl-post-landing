@@ -1,10 +1,10 @@
 /** @format */
 
-import Navbar from "../../components/NavbarWhite";
-import Footer from "../../components/Footer/Footer";
+import Navbar from "../components/NavbarWhite";
+import Footer from "../components/Footer/Footer";
 
-import Intro from "./components/Intro";
-import Founders from "./components/Founders";
+import Intro from "../components/AboutUs/Intro";
+import Founders from "../components/AboutUs/Founders";
 
 const RulesAndFAQs = () => {
   return (

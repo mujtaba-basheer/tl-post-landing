@@ -2,7 +2,7 @@
 import Image from "next/image";
 import React from "react";
 import styled from "styled-components";
-import device from "../../../styles/breakpoints";
+import device from "../../styles/breakpoints";
 
 const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 

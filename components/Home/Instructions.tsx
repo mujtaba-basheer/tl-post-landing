@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import { whyPlayDetails } from "../../../lib/why-play";
-import device from "../../../styles/breakpoints";
+import { whyPlayDetails } from "../../lib/why-play";
+import device from "../../styles/breakpoints";
 
 const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 

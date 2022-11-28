@@ -271,7 +271,7 @@ function Footer() {
             <p>Connect Us</p>
             <LinksContainer>
               {socialLinksData.map((x) => (
-                <Link href={x.url} target="_blank">
+                <Link href={x.url} target="_blank" key={x.key}>
                   <Image
                     key={x.key}
                     src={`${asset_prefix}/assets/Footer/${x.img}.svg`}

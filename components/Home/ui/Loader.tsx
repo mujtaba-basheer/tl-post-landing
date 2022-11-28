@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 
-import device from "../../../../styles/breakpoints";
+import device from "../../../styles/breakpoints";
 
 const rotate = keyframes`
     from {

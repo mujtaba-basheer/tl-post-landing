@@ -1,7 +1,7 @@
 import styled from "styled-components";
-import { starLeftPositions, starRightPositions } from "../../../lib/founders";
-import device from "../../../styles/breakpoints";
-import { CssItemProps } from "../../../types";
+import { starLeftPositions, starRightPositions } from "../../lib/founders";
+import device from "../../styles/breakpoints";
+import { CssItemProps } from "../../types";
 
 const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 

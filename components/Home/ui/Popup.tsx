@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { Dispatch, SetStateAction } from "react";
 
-import { PopupProps } from "../../../../types";
-import device from "../../../../styles/breakpoints";
+import { PopupProps } from "../../../types";
+import device from "../../../styles/breakpoints";
 
 const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
