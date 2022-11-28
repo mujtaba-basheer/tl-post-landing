@@ -1,5 +1,6 @@
 /** @format */
 
+import Footer from "../../components/Footer/Footer";
 import Hero from "./components/Hero";
 import AppFeatures from "./components/AppFeatures";
 import Swiper from "./components/Swiper";
@@ -10,15 +11,18 @@ import Invite from "./components/Invite";
 
 const HomePage = () => {
   return (
-    <main>
-      <Hero />
-      <AppFeatures />
-      <Swiper />
-      <WhyPlay />
-      <Mockups />
-      <Instructions />
-      <Invite />
-    </main>
+    <>
+      <main>
+        <Hero />
+        <AppFeatures />
+        <Swiper />
+        <WhyPlay />
+        <Mockups />
+        <Instructions />
+        <Invite />
+      </main>
+      <Footer />
+    </>
   );
 };
 

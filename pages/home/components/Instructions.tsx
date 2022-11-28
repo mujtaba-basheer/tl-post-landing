@@ -38,8 +38,8 @@ const BigHeading = styled.h2`
 const GridContainer = styled.div`
   margin-top: 3em;
   display: grid;
-  grid-template-columns: repeat(3, 260px);
-  column-gap: 6em;
+  grid-template-columns: repeat(3, max(256px, 20%));
+  justify-content: space-between;
 
   @media ${device.mobile} {
     display: block;
@@ -63,10 +63,10 @@ const GridItem = styled.div`
   & img {
     display: block;
     margin: 2em 0;
+    width: 100%;
+    height: auto;
 
     @media ${device.mobile} {
-      width: 100%;
-      height: auto;
       margin: 1em 0;
     }
   }

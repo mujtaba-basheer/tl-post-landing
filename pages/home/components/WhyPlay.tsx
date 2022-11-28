@@ -48,7 +48,9 @@ const SubText = styled.p`
 const GridContainer = styled.div`
   margin-top: 3em;
   display: grid;
-  grid-template-columns: repeat(3, 290px);
+  // grid-template-columns: repeat(3, 290px);
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
   gap: 2em;
 
   @media ${device.mobile} {
@@ -68,18 +70,23 @@ const GridContainer = styled.div`
 const GridItem = styled.div`
   border: 1px solid #484b5f;
   border-radius: 20px;
-  padding: 1em;
+  padding: 2em;
 
   @media ${device.mobile} {
     width: 290px;
     min-width: 290px;
+    padding: 1em;
   }
 `;
 
 const Header = styled.div`
   display: flex;
   gap: 1em;
-  margin-bottom: 1.5em;
+  margin-bottom: 2.5em;
+
+  @media ${device.mobile} {
+    margin-bottom: 1.5em;
+  }
 
   & h3 {
     font-size: 1.5rem;
@@ -90,7 +97,11 @@ const Header = styled.div`
 const Description = styled.p`
   font-size: 1.25rem;
   font-weight: 400;
-  line-height: 28px;
+  line-height: 35px;
+
+  @media ${device.mobile} {
+    line-height: 28px;
+  }
 `;
 
 const WhyPlay: () => JSX.Element = () => {
