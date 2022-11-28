@@ -74,7 +74,11 @@ jobs:
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
       - name: Build with Next.js
         run: ${{ steps.detect-package-manager.outputs.runner }} next build
+        env:
+          NEXT_PUBLIC_BASE_PATH: /tl-post-landing
       - name: Static HTML export with Next.js
+        env:
+          NEXT_PUBLIC_BASE_PATH: /tl-post-landing
         run: ${{ steps.detect-package-manager.outputs.runner }} next export
       - name: Add .nojekyll file to .out folder
         run: touch ./out/.nojekyll
