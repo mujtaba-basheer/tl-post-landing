@@ -11,21 +11,21 @@ import Instructions from "../components/Home/Instructions";
 import Invite from "../components/Home/Invite";
 
 const HomePage = () => {
-  return (
-    <>
-      <main>
-        <Hero />
-        <AppFeatures />
-        <Swiper />
-        <WhyPlay />
-        <Testimonials />
-        <Mockups />
-        <Instructions />
-        <Invite />
-      </main>
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<main>
+				<Hero />
+				<AppFeatures />
+				<Swiper />
+				<WhyPlay />
+				<Testimonials />
+				<Mockups />
+				<Instructions />
+				<Invite />
+			</main>
+			<Footer />
+		</>
+	);
 };
 
 export default HomePage;
