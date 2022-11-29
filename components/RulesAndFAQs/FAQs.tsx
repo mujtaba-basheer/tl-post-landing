@@ -1,13 +1,8 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
-import {
-  tabLinksData,
-  leagueDetailsData,
-  faqTabLinks,
-  faqDetailsData,
-} from "../../../lib/rules-and-faqs";
-import { FaqDetailsType } from "../../../types";
-import device from "../../../styles/breakpoints";
+import { faqTabLinks, faqDetailsData } from "../../lib/rules-and-faqs";
+import { FaqDetailsType } from "../../types";
+import device from "../../styles/breakpoints";
 
 const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 

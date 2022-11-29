@@ -1,10 +1,10 @@
 /** @format */
 
-import Navbar from "../../components/NavbarWhite";
-import Footer from "../../components/Footer/Footer";
+import Navbar from "../components/NavbarWhite";
+import Footer from "../components/Footer/Footer";
 
-import Swiper from "./components/Swiper";
-import FAQs from "./components/FAQs";
+import Swiper from "../components/RulesAndFAQs/Swiper";
+import FAQs from "../components/RulesAndFAQs/FAQs";
 
 const RulesAndFAQs = () => {
   return (

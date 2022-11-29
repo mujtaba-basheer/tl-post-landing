@@ -1,8 +1,8 @@
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Link from "next/link";
-import device from "../../../styles/breakpoints";
-import { navLinksData } from "../../../lib/navbar";
+import device from "../../styles/breakpoints";
+import { navLinksData } from "../../lib/navbar";
 
 const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 

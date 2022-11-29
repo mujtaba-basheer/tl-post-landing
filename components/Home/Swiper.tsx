@@ -1,8 +1,8 @@
 import styled from "styled-components";
 import { useState, useEffect } from "react";
-import { tabLinksData, leagueDetailsData } from "../../../lib/rules-and-faqs";
-import { LeagueDetailsType } from "../../../types";
-import device from "../../../styles/breakpoints";
+import { tabLinksData, leagueDetailsData } from "../../lib/rules-and-faqs";
+import { LeagueDetailsType } from "../../types";
+import device from "../../styles/breakpoints";
 
 const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
@@ -30,11 +30,25 @@ const BigHeading = styled.h2`
   font-size: 4rem;
   font-weight: 700;
   line-height: 76px;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 
   @media ${device.mobile} {
     font-size: 2.5rem;
     line-height: 48px;
+  }
+`;
+
+const StyledDescription = styled.p`
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 33.6px;
+  max-width: 480px;
+  margin-bottom: 2em;
+
+  @media ${device.mobile} {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 22px;
   }
 `;
 
@@ -59,7 +73,7 @@ const TabLinkItem = styled.button<{ "data-active": boolean }>`
   text-transform: uppercase;
   letter-spacing: 0.1em;
   cursor: pointer;
-  margin-bottom: 4em;
+  margin-bottom: 6em;
 `;
 
 const LeagueContentMobile = styled.div`
@@ -164,39 +178,22 @@ const StyledHeading = styled.h2`
   color: ${(props) => props.color};
   font-size: 2.5rem;
   font-weight: 700;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
 
   @media ${device.mobile} {
     font-size: 1.5rem;
   }
 `;
 
-const QnAs = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2em;
+const LeagueDescription = styled.p`
+  font-size: 2.25rem;
+  font-weight: 600;
+  line-height: 50px;
 
   @media ${device.mobile} {
-    gap: 1.5em;
-    margin-bottom: 1.5em;
-  }
-`;
-
-const QnA = styled.div`
-  font-size: 1.25rem;
-
-  @media ${device.mobile} {
-    font-size: 1rem;
-    padding-bottom: 1.5em;
-    border-bottom: 1px solid rgba(169, 177, 239, 0.3);
-  }
-
-  & h3 {
-    font-weight: 600;
-  }
-
-  & p {
-    font-weight: 400;
+    font-size: 1.5rem;
+    line-height: 33px;
+    margin-bottom: 1em;
   }
 `;
 
@@ -245,7 +242,11 @@ const Swiper: () => JSX.Element = () => {
   return (
     <StyledSection>
       <SectionContent>
-        <BigHeading>How To Play</BigHeading>
+        <BigHeading>Get your trade game on!</BigHeading>
+        <StyledDescription>
+          Choose from four game formats to get an immersive experience of the
+          financial markets
+        </StyledDescription>
         <TabLinks>
           {tabLinksData.map((x, i) => (
             <TabLinkItem
@@ -263,14 +264,7 @@ const Swiper: () => JSX.Element = () => {
               <StyledHeading color={leagueDetails.color}>
                 {leagueDetails.heading}
               </StyledHeading>
-              <QnAs>
-                {leagueDetails.qnas?.map((x, i) => (
-                  <QnA key={i}>
-                    <h3>{x.q}</h3>
-                    <p>{x.a}</p>
-                  </QnA>
-                ))}
-              </QnAs>
+              <LeagueDescription>{leagueDetails.para}</LeagueDescription>
             </LeftSection>
             <RightSection>
               {leagueDetailsData.map((x, i) => (
@@ -316,14 +310,7 @@ const Swiper: () => JSX.Element = () => {
               </TabLinkItemMobile>
               <LeagueContentMobile>
                 <StyledHeading color={x.color}>{x.heading}</StyledHeading>
-                <QnAs>
-                  {leagueDetails.qnas?.map((x, i) => (
-                    <QnA key={i}>
-                      <h3>{x.q}</h3>
-                      <p>{x.a}</p>
-                    </QnA>
-                  ))}
-                </QnAs>
+                <LeagueDescription>{leagueDetails.para}</LeagueDescription>
                 <StyledVideo
                   muted
                   autoPlay={true}

@@ -1,3 +1,5 @@
+import React from "react";
+
 export type InfoItemType = {
   heading: string;
   para: string;
@@ -13,6 +15,7 @@ export type CssItemProps = {
   bottom?: number;
   left?: number;
   right?: number;
+  rotation?: number;
   size: number;
 };
 
@@ -25,7 +28,7 @@ export type LeagueDetailsType = {
   heading: string;
   key: string;
   main: string;
-  paras: string[];
+  para: string;
   qnas: {
     q: string;
     a: string;
@@ -82,4 +85,9 @@ export type NavLinkType = {
   title: string;
   key: string;
   target?: string;
+};
+
+export type WhyPlayDetailType = {
+  heading: string;
+  para: string;
 };
