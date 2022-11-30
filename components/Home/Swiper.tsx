@@ -9,9 +9,8 @@ import device from "../../styles/breakpoints";
 const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const StyledSection = styled.section`
-	background-color: #fbfbff;
+	background-color: #fff;
 	padding: 6em 0;
-	border: 1px solid red;
 
 	@media ${device.mobile} {
 		padding: 3em 0;

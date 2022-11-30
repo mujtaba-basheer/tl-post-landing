@@ -60,6 +60,7 @@ const GridContainer = styled.div`
 		display: flex;
 		overflow-x: auto;
 		margin-top: 40px;
+		margin-bottom: 10px;
 
 		&::-webkit-scrollbar {
 			display: none;
