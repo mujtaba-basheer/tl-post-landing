@@ -40,7 +40,6 @@ const Description = styled.p`
 	font-weight: 400;
 	line-height: 28px;
 	color: #15182c;
-	max-width: 440px;
 
 	@media ${device.mobile} {
 		font-size: 1rem;
@@ -48,7 +47,7 @@ const Description = styled.p`
 		font-weight: 400;
 		font-size: 16px;
 		line-height: 140%;
-		width: 90%;
+		width: 320px;
 	}
 `;
 
@@ -74,7 +73,7 @@ const InputArea = styled.div`
 	box-sizing: border-box;
 
 	@media ${device.mobile} {
-		width: 85%;
+		width: 320px;
 		margin-bottom: 1em;
 	}
 `;
@@ -128,9 +127,10 @@ const StatsArea = styled.div`
 	margin-top: 4rem;
 
 	@media ${device.mobile} {
-		width: 90%;
+		width: 320px;
 		height: auto;
 		margin-top: 3em;
+		margin-bottom: 24px;
 	}
 `;
 
@@ -258,7 +258,7 @@ const ImageArea = styled.div`
 		width: 80%;
 		margin: 0 10%;
 		transform: translateY(50%);
-		margin-top: -6rem;
+		margin-top: -10rem;
 	}
 
 	/* & img {
