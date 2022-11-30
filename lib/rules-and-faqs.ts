@@ -50,7 +50,7 @@ export const leagueDetailsData: LeagueDetailsType[] = [
 				a: "Games as short as a minute to as long as a day!",
 			},
 		],
-		color: "#F38665",
+		color: "#FF6C40",
 		img_file: "BattleLeagues_on_TradingLeagues",
 		vid_file: "battleleagues",
 	},
