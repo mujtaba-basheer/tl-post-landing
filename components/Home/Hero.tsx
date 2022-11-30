@@ -7,7 +7,9 @@ import NavBar from "./Navbar";
 const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const Container = styled.div`
-	display: grid;
+	display: flex;
+	flex: 0.5;
+	flex-direction: column;
 	justify-content: start;
 	align-content: start;
 	box-sizing: border-box;
