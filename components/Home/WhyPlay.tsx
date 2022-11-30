@@ -123,7 +123,7 @@ const WhyPlay: () => JSX.Element = () => {
 						<GridItem key={i}>
 							<Header>
 								<img
-									src={`${asset_prefix}/assets/HomePage/green.svg`}
+									src={`${asset_prefix}/assets/HowToPlay/${x.icon}`}
 									alt="marker"
 								/>
 								<h3 dangerouslySetInnerHTML={{ __html: x.heading }}></h3>
