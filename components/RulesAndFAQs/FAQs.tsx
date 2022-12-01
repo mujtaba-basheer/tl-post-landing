@@ -16,7 +16,7 @@ const StyledSection = styled.section`
 
 const SectionContent = styled.div`
   margin: 0 auto;
-  width: min(80vw, 1400px);
+  width: min(70vw, 1200px);
   color: #15182c;
 
   @media ${device.mobile} {
@@ -41,9 +41,10 @@ const FaqLinks = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  gap: 2em;
+  margin-top: 10px;
 
   @media ${device.mobile} {
+    margin-top: 0;
     flex-direction: row;
     overflow-x: auto;
     padding: 0.5em 0;
@@ -61,7 +62,8 @@ const FaqLinks = styled.div`
 
 const FaqLinkItem = styled.button<{ "data-active": boolean }>`
   font-size: 1.25rem;
-  font-weight: 400;
+  line-height: 24px;
+  font-weight: ${(props) => (props["data-active"] ? "700" : "400")};
   background: none;
   border: none;
   font-family: inherit;
@@ -75,12 +77,25 @@ const FaqLinkItem = styled.button<{ "data-active": boolean }>`
     width: max-content;
     font-size: 1rem;
     font-weight: ${(props) => (props["data-active"] ? "700" : "400")};
+    margin: 0 !important;
+  }
+
+  &:first-child {
+    margin-bottom: 1.5rem;
+    line-height: 36px;
+
+    @media ${device.mobile} {
+      line-height: 24px;
+    }
+  }
+  &:not(:first-child) {
+    margin: 1.5rem 0;
   }
 `;
 
 const MainContent = styled.div`
   display: grid;
-  grid-template-columns: repeat(12, 1fr);
+  grid-template-columns: repeat(13, 1fr);
   column-gap: 1em;
 
   @media ${device.mobile} {
@@ -115,7 +130,7 @@ const LeftSection = styled.div`
 `;
 
 const RightSection = styled.div`
-  grid-column: 6 / 13;
+  grid-column: 5 / 14;
   // justify-self: end;
   position: relative;
   align-self: center;
@@ -134,7 +149,7 @@ const Faqs = styled.div`
 const FaqItem = styled.div`
   font-size: 1.25rem;
   border-bottom: 1px solid #484b5f;
-  padding: 1em 0;
+  padding: 0.8em 0;
 
   @media ${device.mobile} {
     font-size: 1rem;
@@ -158,11 +173,12 @@ const FaqItemHead = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0.5em 0;
+  // padding: 0.5em 0;
 
   & h2 {
     font-size: 1.6rem;
     font-weight: 600;
+    line-height: 36px;
 
     @media ${device.mobile} {
       font-size: 1.125rem;
@@ -178,7 +194,7 @@ const FaqItemHead = styled.div`
 
   &.active {
     &.active + p {
-      padding: 1em 0;
+      padding: 0.8em 0;
       max-height: 500px;
     }
   }
@@ -190,6 +206,7 @@ const FaqItemHead = styled.div`
 
 const FaqAnswer = styled.p`
   font-size: 1.25rem;
+  line-height: 28px;
   font-weight: 400;
   width: calc(100% - 32px);
   max-height: 0;
@@ -226,11 +243,12 @@ const FAQs: () => JSX.Element = () => {
     setFaqDetails({ ...faqDetails, state: "exiting" });
     setTimeout(() => {
       setFaqDetails({ ...faqDetailsData[currentTab], state: "entering" });
+      setCurrentQues(0);
     }, 200);
   }, [currentTab]);
 
   return (
-    <StyledSection>
+    <StyledSection id="faqs">
       <SectionContent>
         <BigHeading>FAQs</BigHeading>
         <MainContent>

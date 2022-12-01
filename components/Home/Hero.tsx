@@ -28,6 +28,14 @@ const HeaderTag = styled.h1`
   display: flex;
   align-items: center;
   justify-content: center;
+  width: calc(160px + 84px);
+  text-align: start;
+
+  @media ${device.mobile} {
+    font-size: 2.5rem;
+    min-height: 48px;
+    width: calc(120px + 60px);
+  }
 `;
 
 const wheel = keyframes`
@@ -50,6 +58,11 @@ const AnimContainer = styled.div`
   display: inline-block;
   overflow-y: hidden;
   width: 160px;
+
+  @media ${device.mobile} {
+    height: 48px;
+    width: 120px;
+  }
 `;
 
 const AnimText = styled.div`
@@ -254,7 +267,8 @@ const LeftSection = () => {
 const HeroContainer = styled.div`
   padding: 2rem;
   background: url(${asset_prefix}/assets/Footer/BG.png);
-  background-repeat: repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 
   @media ${device.mobile} {
     padding: 0.5rem;
