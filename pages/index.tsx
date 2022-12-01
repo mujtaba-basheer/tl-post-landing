@@ -9,23 +9,27 @@ import Testimonials from "../components/Home/Testimonials";
 import Mockups from "../components/Home/Mockups";
 import Instructions from "../components/Home/Instructions";
 import Invite from "../components/Home/Invite";
+import Head from "next/head";
 
 const HomePage = () => {
-	return (
-		<>
-			<main>
-				<Hero />
-				<AppFeatures />
-				<Swiper />
-				<WhyPlay />
-				<Testimonials />
-				<Mockups />
-				<Instructions />
-				<Invite />
-			</main>
-			<Footer />
-		</>
-	);
+  return (
+    <>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
+      <main>
+        <Hero />
+        <AppFeatures />
+        <Swiper />
+        <WhyPlay />
+        <Testimonials />
+        <Mockups />
+        <Instructions />
+        <Invite />
+      </main>
+      <Footer />
+    </>
+  );
 };
 
 export default HomePage;

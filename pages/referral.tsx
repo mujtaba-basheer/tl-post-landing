@@ -1,5 +1,6 @@
 /** @format */
 
+import Head from "next/head";
 import { FormEventHandler, useEffect, useState } from "react";
 import styled from "styled-components";
 import device from "../styles/breakpoints";
@@ -138,6 +139,9 @@ const Referral = () => {
 
   return (
     <StyledSection>
+      <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </Head>
       <ContentContainer>
         <LogoContainer>
           <picture>

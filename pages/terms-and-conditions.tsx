@@ -42,6 +42,7 @@ const ToC = () => {
   return (
     <main>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>TradingLeagues: Terms &amp; Conditions</title>
       </Head>
       <Container>
