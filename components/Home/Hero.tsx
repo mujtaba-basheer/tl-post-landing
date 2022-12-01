@@ -21,9 +21,10 @@ const Container = styled.div`
 `;
 
 const HeaderTag = styled.h1`
+  font-size: 3.5rem;
   font-weight: 700;
   color: #ffffff;
-  min-height: 76.66px;
+  // min-height: 76.66px;
   display: flex;
   align-items: center;
   justify-content: center;

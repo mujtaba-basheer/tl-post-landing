@@ -19,7 +19,7 @@ export type CssItemProps = {
   right?: number;
   rotation?: number;
   size: number;
-  // mSize: number;
+  mSize?: number;
 };
 
 export type TabLinkType = {
