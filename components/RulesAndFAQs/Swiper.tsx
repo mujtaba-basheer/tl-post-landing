@@ -7,7 +7,7 @@ import device from "../../styles/breakpoints";
 const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const StyledSection = styled.section`
-  background-color: #fbfbff;
+  background-color: #ffffff;
   padding: 6em 0;
 
   @media ${device.mobile} {
@@ -174,16 +174,21 @@ const StyledHeading = styled.h2`
 const QnAs = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 2em;
+  gap: 1em;
 
   @media ${device.mobile} {
     gap: 1.5em;
-    margin-bottom: 1.5em;
+    margin-bottom: 2em;
   }
 `;
 
 const QnA = styled.div`
   font-size: 1.25rem;
+  padding-bottom: 1em;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid rgba(169, 177, 239, 0.3);
+  }
 
   @media ${device.mobile} {
     font-size: 1rem;

@@ -2,8 +2,8 @@ import styled from "styled-components";
 import device from "../../styles/breakpoints";
 
 const StyledSection = styled.section`
-  background-color: #fbfbff;
-  padding: 6em 0;
+  background-color: #ffffff;
+  padding: 8em 0;
 
   @media ${device.mobile} {
     padding: 3em 0;
@@ -12,7 +12,7 @@ const StyledSection = styled.section`
 
 const SectionContent = styled.div`
   margin: 0 auto;
-  width: min(80vw, 1400px);
+  width: min(70vw, 1100px);
   color: #15182c;
 
   @media ${device.mobile} {
@@ -41,7 +41,7 @@ const MainContent = styled.div`
 `;
 
 const LeftSection = styled.div`
-  grid-column: 1 / 4;
+  grid-column: 1 / 5;
   opacity: 1;
   transition: opacity 200ms ease-in;
 
@@ -71,6 +71,7 @@ const RightSection = styled.div`
   // justify-self: end;
   position: relative;
   align-self: center;
+  justify-self: flex-end;
   // height: 446px;
 `;
 

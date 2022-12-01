@@ -8,7 +8,7 @@ const asset_prefix = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 const NavContainer = styled.nav`
   padding: 2em 0;
-  background-color: #fbfbff;
+  background-color: #ffffff;
 
   @media ${device.mobile} {
     padding: 1em 0;

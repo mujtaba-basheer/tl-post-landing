@@ -15,7 +15,7 @@ const StyledSection = styled.section`
 
 const SectionContent = styled.div`
   margin: 0 auto;
-  width: min(70vw, 1200px);
+  width: min(60vw, 850px);
   color: #ffffff;
 
   @media ${device.mobile} {
@@ -70,6 +70,7 @@ const AboutPara = styled.p`
 
 const FoundersContainer = styled.div`
   display: flex;
+  justify-content: space-between;
   gap: 4em;
   margin-top: 7.5em;
 

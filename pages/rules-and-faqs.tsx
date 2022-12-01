@@ -4,6 +4,7 @@ import Navbar from "../components/NavbarWhite";
 import Footer from "../components/Footer/Footer";
 
 import Swiper from "../components/RulesAndFAQs/Swiper";
+import WhyPlay from "../components/Home/WhyPlay";
 import FAQs from "../components/RulesAndFAQs/FAQs";
 
 const RulesAndFAQs = () => {
@@ -12,9 +13,10 @@ const RulesAndFAQs = () => {
       <Navbar />
       <main>
         <Swiper />
+        <WhyPlay />
         <FAQs />
-        <Footer />
       </main>
+      <Footer />
     </>
   );
 };

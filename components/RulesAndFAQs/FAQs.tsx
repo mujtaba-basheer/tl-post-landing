@@ -47,7 +47,7 @@ const FaqLinks = styled.div`
     flex-direction: row;
     overflow-x: auto;
     padding: 0.5em 0;
-    gap: 1em;
+    gap: 1.6em;
 
     &::-webkit-scrollbar {
       display: none;
