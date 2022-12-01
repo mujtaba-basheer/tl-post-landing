@@ -9,6 +9,7 @@ export default function Document() {
   return (
     <Html onScroll={() => console.log("d")}>
       <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <Script
           strategy="beforeInteractive"
           src="https://www.googletagmanager.com/gtag/js?id=G-B840N99HCC"
