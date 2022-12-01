@@ -332,7 +332,7 @@ const StyledVideo = styled.video`
   /* display: block; */
   /* opacity: 0; */
   transition: opacity 200ms ease-in-out;
-  border-radius: 15px;
+  border-radius: 30px;
   position: absolute;
   bottom: 40;
   right: 0;
