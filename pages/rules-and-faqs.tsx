@@ -8,17 +8,17 @@ import WhyPlay from "../components/Home/WhyPlay";
 import FAQs from "../components/RulesAndFAQs/FAQs";
 
 const RulesAndFAQs = () => {
-  return (
-    <>
-      <Navbar />
-      <main>
-        <Swiper />
-        <WhyPlay />
-        <FAQs />
-      </main>
-      <Footer />
-    </>
-  );
+	return (
+		<>
+			<Navbar />
+			<main>
+				<Swiper />
+				<WhyPlay />
+				<FAQs />
+			</main>
+			<Footer />
+		</>
+	);
 };
 
 export default RulesAndFAQs;

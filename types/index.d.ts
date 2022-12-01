@@ -40,7 +40,7 @@ export type LeagueDetailsType = {
 	img_file: string;
 	vid_file: string;
 	state?: string;
-}[];
+};
 
 export type FaqItemType = {
 	question: string;
