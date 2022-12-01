@@ -22,7 +22,7 @@ const NavbarContent = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  // position: relative;
 
   @media ${device.mobile} {
   }
@@ -47,17 +47,21 @@ const LinksContainer = styled.div`
   gap: 2em;
 
   @media ${device.mobile} {
+    background-color: #1a1c2b;
     position: absolute;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 1em;
+    align-items: center;
+    justify-content: center;
+    gap: 2em;
+    height: 100vh;
     max-height: 0;
     overflow-y: hidden;
     right: 0;
-    top: 42px;
+    left: 0;
+    top: 0;
     z-index: 5;
-    background-color: #fbfbff;
-    transition: max-height 300ms ease-out;
+    opacity: 0;
+    transition: max-height 300ms ease-out, opacity 300ms ease-in;
   }
 `;
 
@@ -72,10 +76,14 @@ const Menu = styled.button`
     display: block;
   }
 
+  &.open {
+    z-index: 6;
+  }
+
   &.open + div {
-    max-height: 162px;
-    border: 2px solid #15182c;
-    border-top: none;
+    height: 100vh;
+    max-height: 100vh;
+    opacity: 1;
   }
 
   & img {
@@ -83,14 +91,14 @@ const Menu = styled.button`
   }
 `;
 
-const LinkItem = styled(Link)<{ "data-active": boolean }>`
+const LinkItem = styled(Link)<{ "data-active"?: boolean }>`
   text-decoration: none;
   color: ${(props) => (props["data-active"] ? "#00DF8D" : "currentColor")};
   font-size: 1rem;
   font-weight: 500;
 
   @media ${device.mobile} {
-    font-size: 0.875rem;
+    color: ${(props) => (props["data-active"] ? "#00DF8D" : "#ffffff")};
     margin: 0 1em;
 
     &:first-child {
@@ -110,7 +118,8 @@ const WalletLink = styled(Link)`
   padding: 0.5em 1.5em;
 
   @media ${device.mobile} {
-    font-size: 0.875rem;
+    color: #ffffff;
+    border-color: #ffffff;
     padding: 0.4em 1em;
 
     &:last-child {
@@ -122,6 +131,7 @@ const WalletLink = styled(Link)`
 
 const Navbar: () => JSX.Element = () => {
   const [pathname, setPathname] = useState<string>("");
+  const [navOpen, setNavOpen] = useState<boolean>(false);
 
   useEffect(() => {
     setPathname(window.location.pathname);
@@ -134,13 +144,24 @@ const Navbar: () => JSX.Element = () => {
           <img src={`${asset_prefix}/assets/navbar/TL_logo.svg`} alt="logo" />
         </LogoContainer>
         <Menu
-          onClick={(ev) =>
-            (ev.target as HTMLButtonElement).classList.toggle("open")
-          }
+          onClick={(ev) => {
+            (ev.target as HTMLButtonElement).classList.toggle("open");
+            setNavOpen(!navOpen);
+          }}
         >
-          <img src={`${asset_prefix}/assets/navbar/menu.svg`} alt="hamburger" />
+          <img
+            src={`${asset_prefix}/assets/navbar/${
+              navOpen ? "close" : "menu"
+            }.svg`}
+            alt="hamburger"
+          />
         </Menu>
         <LinksContainer>
+          {navOpen && (
+            <LinkItem href="/">
+              <img src={`${asset_prefix}/assets/navbar/TL_logo_mobile.svg`} />
+            </LinkItem>
+          )}
           {navLinksData.map((x) => (
             <LinkItem
               href={x.key}

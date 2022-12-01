@@ -95,3 +95,11 @@ export type WhyPlayDetailType = {
   para: string;
   icon: string;
 };
+
+export type TestimonialType = {
+  text: string;
+  name: string;
+  img: string;
+  amount: string;
+  "grid-area": string;
+};
