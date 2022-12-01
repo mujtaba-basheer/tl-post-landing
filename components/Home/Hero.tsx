@@ -253,6 +253,8 @@ const LeftSection = () => {
 
 const HeroContainer = styled.div`
   padding: 2rem;
+  background: url(${asset_prefix}/assets/Footer/BG.png);
+  background-repeat: repeat;
 
   @media ${device.mobile} {
     padding: 0.5rem;
@@ -327,7 +329,9 @@ const StyledVideo = styled.video`
     /* position: relative; */
     width: 251px;
     height: auto;
-    margin-bottom: 1.5em;
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
     opacity: 1;
     height: 487px;
   }
