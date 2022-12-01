@@ -61,16 +61,16 @@ export const leagueDetailsData: LeagueDetailsType[] = [
 		para: "Accurately predict the closing price of a stock and win BIG! Put your forecasting skills to the test and win!",
 		qnas: [
 			{
-				q: "Can you pick the winning stock?",
-				a: "Vote for the stock that will outperform the other to win",
+				q: "Can you predict the price of a stock?",
+				a: "Accurately select the closing price range of a stock to win",
 			},
 			{
-				q: "New to the financial markets?",
-				a: "Built for beginners - this is the easiest game in our universe",
+				q: "Still learning the financial markets?",
+				a: "100+ daily games to practise your skill & win real money",
 			},
 			{
-				q: "Ready to start your fantasy trading league journey?",
-				a: "Start small & win big real money prizes. Games start at ₹25 earn 10x",
+				q: "Ready to put your aim to the test for real money prizes?",
+				a: "Enter the big leagues! Start as small as Rs.25 and win up to 100x",
 			},
 			{
 				q: "What's in it for you-Stocks, Cryptos and more.",
@@ -82,58 +82,58 @@ export const leagueDetailsData: LeagueDetailsType[] = [
 		vid_file: "targetleagues",
 	},
 	{
-		heading: "Selection Leagues",
-		key: "section-leagues",
-		main: "Fancy becoming a portfolio manager? Build a fantasy portfolio of 4-6 stocks to compete with other players. The best portfolio wins!",
-		para: "Build the best-performing fantasy stock portfolio and win BIG! Take on the role of a portfolio manager in our universe to win",
-		qnas: [
-			{
-				q: "Can you pick the winning stock?",
-				a: "Vote for the stock that will outperform the other to win",
-			},
-			{
-				q: "New to the financial markets?",
-				a: "Built for beginners - this is the easiest game in our universe",
-			},
-			{
-				q: "Ready to start your fantasy trading league journey?",
-				a: "Start small & win big real money prizes. Games start at ₹25 earn 10x",
-			},
-			{
-				q: "What's in it for you-Stocks, Cryptos and more.",
-				a: "Games as short as a minute to as long as a day!",
-			},
-		],
-		color: "#74D5FF",
-		img_file: "SelectionLeagues_on_TradingLeagues",
-		vid_file: "selectionleagues",
-	},
-	{
 		heading: "Classic Leagues",
 		key: "classic-leagues",
 		main: "Compete against the best day traders on your favorite Index! Experience simulated trading with real-time charts. The most profitable trader wins!",
 		para: "Experience real-time, simulated day trading where the best trader wins! The ultimate game for stock market glory",
 		qnas: [
 			{
-				q: "Can you pick the winning stock?",
-				a: "Vote for the stock that will outperform the other to win",
+				q: "Want to try your hand at being a portfolio-manager?",
+				a: "Create a winning fantasy stock portfolio now",
 			},
 			{
-				q: "New to the financial markets?",
-				a: "Built for beginners - this is the easiest game in our universe",
+				q: "Pick 4, Pick 5 and Pick 6?",
+				a: "Multiple game formats that keep it simple and easy",
 			},
 			{
-				q: "Ready to start your fantasy trading league journey?",
-				a: "Start small & win big real money prizes. Games start at ₹25 earn 10x",
+				q: "Want to participate in a Guaranteed prize-pool?",
+				a: "Games across guaranteed and non-guaranteed prize pools and market sessions",
 			},
 			{
-				q: "What's in it for you-Stocks, Cryptos and more.",
+				q: "What's in it for you- Stocks, Cryptos and more.",
 				a: "Games as short as a minute to as long as a day!",
 			},
 		],
 		color: "#FFC0D5",
 		img_file: "ClassicLeagues_on_TradingLeagues",
 		vid_file: "classicleagues",
+	},
+	{
+		heading: "Selection Leagues",
+		key: "section-leagues",
+		main: "Fancy becoming a portfolio manager? Build a fantasy portfolio of 4-6 stocks to compete with other players. The best portfolio wins!",
+		para: "Build the best-performing fantasy stock portfolio and win BIG! Take on the role of a portfolio manager in our universe to win",
+		qnas: [
+			{
+				q: "Think you can win the title of the best day trader?",
+				a: "Compete in the ultimate fantasy stock trading game for glory",
+			},
+			{
+				q: "Like the thrill of day trading?",
+				a: "Enyoy trading on real-time charts, without all the risks of trading.",
+			},
+			{
+				q: "Winner, winner, chicken dinner?",
+				a: "Play in formats such as Winner takes all and wins up to 100x",
+			},
+			{
+				q: "What's in it for you -Stocks, Cryptos and Indices.",
+				a: "Only the upside without the fuss of losing!",
+			},
+		],
+		color: "#74D5FF",
+		img_file: "SelectionLeagues_on_TradingLeagues",
+		vid_file: "selectionleagues",
 	},
 ];
 
