@@ -286,7 +286,7 @@ const Swiper: () => JSX.Element = () => {
                   muted
                   autoPlay={true}
                   loop
-                  // playsInline
+                  playsInline
                   src={`${asset_prefix}/assets/swiper/${x.vid_file}.mp4`}
                 />
               ))}
