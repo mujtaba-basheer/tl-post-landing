@@ -24,7 +24,7 @@ const HeaderTag = styled.h1`
   font-size: 3.5rem;
   font-weight: 700;
   color: #ffffff;
-  // min-height: 76.66px;
+  min-height: 67px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -45,18 +45,20 @@ const wheel = keyframes`
 `;
 
 const AnimContainer = styled.div`
+  position: relative;
+  height: 67px;
+  display: inline-block;
+  overflow-y: hidden;
+  width: 160px;
+`;
+
+const AnimText = styled.div`
   width: 100%;
   height: 200%;
   transform: translateY(-100%);
-  // animation: ${wheel} 2.5s cubic-bezier(0.7, 0.08, 0.03, 0.82) infinite forwards;
-  animation-delay: 2.5s;
-`;
-
-const AnimText = styled.span`
   color: rgba(32, 49, 174, 1);
-  margin-right: 0.3em;
-  font-size: 56px;
-  font-weight: 700;
+  animation: ${wheel} 2.5s cubic-bezier(0.7, 0.08, 0.03, 0.82) infinite forwards;
+  animation-delay: 2.5s;
 
   & span {
     display: block;
@@ -64,13 +66,6 @@ const AnimText = styled.span`
     top: 0;
     right: 0;
   }
-`;
-
-const On = styled.span`
-  color: rgba(255, 255, 255, 1);
-  margin-right: 0.3rem;
-  font-size: 56px;
-  font-weight: 700;
 `;
 
 const Description = styled.p`
@@ -262,7 +257,7 @@ const HeroContainer = styled.div`
   @media ${device.mobile} {
     padding: 0.5rem;
     width: 100vw;
-    margin-bottom: 13em;
+    margin-bottom: 7.5em;
   }
 `;
 
@@ -330,12 +325,11 @@ const StyledVideo = styled.video`
   @media ${device.mobile} {
     border-radius: 30px;
     /* position: relative; */
-    width: 70%;
+    width: 251px;
     height: auto;
     margin-bottom: 1.5em;
     opacity: 1;
-    height: 588px;
-    width: 303px;
+    height: 487px;
   }
 
   &.active {
@@ -359,7 +353,7 @@ const Hero = () => {
               muted
               autoPlay={true}
               loop
-              // playsInline
+              playsInline
               src={`${asset_prefix}/assets/HomePage/Herocard.mp4`}
             />
           </ImageArea>

@@ -212,7 +212,7 @@ const StyledVideo = styled.video`
   display: block;
   opacity: 0;
   transition: opacity 200ms ease-in-out;
-  /* border-radius: 15px; */
+  border-radius: 15px;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -221,7 +221,7 @@ const StyledVideo = styled.video`
     border-radius: 30px;
     position: relative;
     width: 70%;
-    height: 525px;
+    height: auto;
     margin-bottom: 1.5em;
     opacity: 1;
   }
