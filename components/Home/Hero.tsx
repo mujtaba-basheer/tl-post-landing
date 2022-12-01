@@ -106,6 +106,7 @@ const GetLinkArea = styled.div`
 
   @media ${device.mobile} {
     display: block;
+    min-width: auto;
   }
 `;
 
