@@ -128,6 +128,8 @@ const PageLinksContainer = styled.div<{ "grid-area": string }>`
 
   @media ${device.mobile} {
     margin-bottom: 2.5em;
+    gap: 0;
+    justify-content: space-between;
   }
 
   & div.links-box {
