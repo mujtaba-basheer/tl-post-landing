@@ -287,7 +287,7 @@ const SytledSection = styled.div`
 
   @media ${device.mobile} {
     padding: 1.5em 1em;
-    padding-bottom: 7.5em;
+    // padding-bottom: 7.5em;
   }
 `;
 

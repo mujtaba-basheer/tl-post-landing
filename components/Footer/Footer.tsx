@@ -60,9 +60,11 @@ const InputArea = styled.div`
   padding-left: 0.5em;
   background: rgba(255, 255, 255, 0.1);
   width: 300px;
+
   @media ${device.mobile} {
-    width: 320px;
+    width: auto;
   }
+
   & input {
     font-size: 1.125rem;
     font-weight: 400;
