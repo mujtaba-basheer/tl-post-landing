@@ -127,7 +127,7 @@ const StyledForm = styled.form`
 
     @media ${device.mobile} {
       position: relative;
-      flex-direction: column;
+      display: block;
     }
 
     & div.input {
