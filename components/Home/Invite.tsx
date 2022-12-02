@@ -194,10 +194,12 @@ const StyledForm = styled.form`
         text-transform: uppercase;
         color: #ffffff;
         cursor: pointer;
+
         @media ${device.mobile} {
           display: block;
           padding: 10.5px 16px;
           margin-left: 0;
+          height: 37px;
         }
       }
     }
