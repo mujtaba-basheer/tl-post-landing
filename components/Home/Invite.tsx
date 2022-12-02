@@ -128,6 +128,7 @@ const StyledForm = styled.form`
     @media ${device.mobile} {
       position: relative;
       display: block;
+      height: auto;
     }
 
     & div.input {
